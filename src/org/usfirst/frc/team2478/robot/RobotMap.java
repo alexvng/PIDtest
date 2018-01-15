@@ -14,13 +14,12 @@ public class RobotMap {
 	public static int RIGHT_FRONT = 1;
 	public static int RIGHT_BACK = 3;
 	
-	public static int LEFT_JOY = 1;
-	public static int RIGHT_JOY = 0;
+	public static int XBOX_ID = 0;
 	
-	public static double ANGULAR_P = 0.04;
+	public static double ANGULAR_P = 0.023;
 	public static double ANGULAR_I = 0;
-	public static double ANGULAR_D = 0;
-	public static double ANGULAR_TOLERANCE = 0.05;
-	public static double ANGULAR_SETPOINT = 180;
+	public static double ANGULAR_D = 0.01725;
+//	public static double ANGULAR_TOLERANCE = 0.05;
+	public static double ANGULAR_SETPOINT = 90;
 
 }
