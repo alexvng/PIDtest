@@ -16,10 +16,14 @@ public class RobotMap {
 	
 	public static int XBOX_ID = 0;
 	
-	public static double ANGULAR_P = 0.023;
-	public static double ANGULAR_I = 0;
-	public static double ANGULAR_D = 0.01725;
+	public static double ANGULAR_P = 0.02325;
+//	public static double ANGULAR_I = 0.0003; //turning
+	public static double ANGULAR_I = 0.000; //correction
+	public static double ANGULAR_D = 0.02225; //01725
 //	public static double ANGULAR_TOLERANCE = 0.05;
-	public static double ANGULAR_SETPOINT = 90;
+	public static double ANGULAR_SETPOINT = 0;
+	
+	public static double DRIVE_SPEED = 0.9;
+	public static double MOTOR_GAINS = 0.6;
 
 }

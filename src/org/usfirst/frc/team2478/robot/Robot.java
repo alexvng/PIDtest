@@ -77,13 +77,17 @@ public class Robot extends IterativeRobot {
 	public void testInit() {
 		timer.reset();
 		timer.start();
+		navx.zeroYaw();
+		pidLoop.reset();
+//		pidLoop.resetIntegrator();
 	}
 	
 	@Override
 	public void testPeriodic() {
 		
 		double pidOutput = pidLoop.calculate(angle, timer.get());
-		differentialDrive.tankDrive(pidOutput * 0.7, pidOutput * -0.7);
+		differentialDrive.tankDrive(RobotMap.DRIVE_SPEED + (pidOutput * RobotMap.MOTOR_GAINS),
+									RobotMap.DRIVE_SPEED + (pidOutput * -1 * RobotMap.MOTOR_GAINS));
 		
 		angle = navx.getAngle();
 		
